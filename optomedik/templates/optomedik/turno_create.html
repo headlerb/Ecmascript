@@ -1,0 +1,29 @@
+{% extends 'optomedik/layout/layout.html' %}
+
+
+{% block content %}
+    <h1>
+        {% if not edit %}
+            Crear Turno
+        {% else %}
+            
+            <nav class="navbar navbar-expand-sm bg-light">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" >Actualizacion de Turno {{ turnos.pk }}</a>
+                  </li>
+                  
+                </ul>
+              </nav>
+        {% endif %}
+    </h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div>
+            <a href="{% url 'optomedik:url_listar_turnos' %}" class="btn btn-outline-secondary">Atras</a>
+            <button class="btn btn-outline-info" type="submit">Guardar</button>
+        </div>
+    </form>
+{% endblock %}

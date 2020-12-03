@@ -1,0 +1,38 @@
+{% extends "optomedik/layout/layout.html" %}
+
+{% block body %}
+<h1>
+    <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                   Ventas x Vendedor
+            </h1>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</h1>
+    
+    <table class="table table-striped">
+        <thead>
+          <tr>            
+            <th>Vendedor</th>
+           
+            <th>Total Pedidos</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for unPaciente in Ctxto_vendedor %}
+            <tr>
+                <td>{{unPaciente.id_vendedor}} </td> 
+                <td>{{unPaciente.total}} </td> 
+                         
+            </tr>   
+            {% endfor %}      
+        </tbody>
+    </table>    
+    
+{% endblock %}  

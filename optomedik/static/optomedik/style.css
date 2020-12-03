@@ -1,0 +1,121 @@
+/* reglas
+selectores
+declaraciones
+propiedades
+valores */
+
+body { background: #EEE url(images/bg.png) repeat left top , Helvetica, Arial, sans-serif; font-size: 14px; margin: 0; padding: 0; }
+  a { text-decoration: none; }
+.table td, .table th {
+    font-size: 14px
+    }  
+select {
+      word-wrap: normal;
+      font-size: 15px;
+      width: 200px;
+      font-size: 20;
+  }    
+.header {
+    background-color: #3d4246;
+    justify-content: space-between;
+    color: white;
+    display: flex;
+    height: 70px;
+    /*display: flex;
+    
+    align-items: center;
+    justify-content: space-between;    */
+  }  
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+  figure {
+    margin: 0;
+  }
+
+
+  .header a {
+    color: rgb(250, 249, 249);
+    text-decoration: none;
+    
+  }  
+  .cabecera {
+    /*border: 1px solid red;   */
+    width: 100%;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    
+    height: inherit;
+    flex-wrap: inherit;
+  }
+  .menu {
+    height: inherit;
+    float: center;
+    
+  }
+  .logo {  height: inherit; float:center;font-size: 45px;
+  }
+  .info {  height: inherit; float: right; padding: 4px; color:white
+    }
+  .header ol {
+    display: flex;
+    height: inherit;
+  }
+  .header ol li {
+    height: inherit;
+  }
+  .header a {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+  }
+  
+ .flexbox {
+    display: flex;
+    flex-wrap: nowrap;    
+    /* flex-direction: column; */
+  }
+  
+  .box {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid red;
+  
+    flex-shrink: 0;
+  }
+  
+  .login{
+   
+    width: 120px;
+    background: #FFF; border: 1px solid #DADADA; border-radius: 3px;
+    margin: 5% auto auto; padding: 50px 30px 40px; width: 385px; -moz-box-shadow: 0px 0px 10px #ccc;
+    -webkit-box-shadow: 0px 0px 10px #ccc; box-shadow: 0px 0px 10px #ccc; 
+  }
+  .inicio{
+
+    background: #FFF; border: 1px solid #DADADA; border-radius: 3px;
+    margin: 1% auto auto; padding: 50px 30px 40px; width: 385px; -moz-box-shadow: 0px 0px 10px #ccc;
+    -webkit-box-shadow: 0px 0px 10px #ccc; box-shadow: 0px 0px 10px #ccc; width: 600px;
+  }
+  
+  .footer { background: #E0E0E0 repeat-x left top;
+    text-align: right; 
+    width: 100%;  padding: 3px 0; position: fixed;
+    bottom: 0; left: 0; right: 0; 
+  }
+  .footer img {
+    vertical-align: middle;
+  }
+  
+  .footer a {
+    color: rgb(32, 8, 165);
+  }
+  
+ 

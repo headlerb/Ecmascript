@@ -1,0 +1,44 @@
+{% extends "optomedik/layout/layout.html" %}
+   
+{% block body %}
+
+<h1>
+  <nav class="navbar navbar-expand-sm bg-light">
+      <ul class="navbar-nav">
+      <li class="nav-item">
+          <a class="nav-link" href="#">Historias Clinicas :</a>
+      </li>
+      
+      </ul>
+  </nav>
+</h1>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Peciente</th>
+            <th>Medico</th>
+            <th>Observaciones</th>
+            <th>Acciones</th>            
+          </tr>
+        </thead>
+        <tbody>
+                          
+            {% for unHc in Ctxto_hc %}
+                <tr>                 
+                <td> HC {{unHc.id}} </a></td>                
+                <td>{{unHc.fecha}} </td> 
+                <td>{{unHc.paciente}} </td> 
+                <td>{{unHc.medico}} </td> 
+                <td>{{unHc.observaciones}} </td> 
+                <td><a href="{% url 'optomedik:hc_update' unHc.id %}">Modificar</a></td>                                
+            </tr>                           
+            {% endfor %}
+            
+        </tbody>
+      </table>   
+      <a class="btn btn-outline-info" href="{% url 'optomedik:hc_create' %}">Crear</a>
+{% endblock %}
+
+

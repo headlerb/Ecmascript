@@ -1,0 +1,30 @@
+{% extends 'optomedik/layout/layout.html' %}
+
+{% block content %}
+    <h1>
+        <nav class="navbar navbar-expand-sm bg-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        {% if not edit %}
+                        Crear Historia Clinica 
+                    {% else %}            
+                        Modificar Historia Clinica # {{historia_clinica.id}}
+                    {% endif %}
+                </h1>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </h1>
+  
+       
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <a href="{% url 'optomedik:url_listar_hc' 0%}"  class="btn btn-outline-secondary">regresar</a>
+            <button class="btn btn-outline-info" type="submit">Guardar</button>
+        </div>
+    </form>
+{% endblock %}

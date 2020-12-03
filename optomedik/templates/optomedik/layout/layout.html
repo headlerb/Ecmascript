@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">    
+  <head>
+    <title>Optomedik</title>  
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="{% static 'optomedik/style.css'%}">  
+  </head>
+  <body>
+    <header class="header">
+        <div class="cabecera">  
+          <nav class="logo">Optomedik
+          </nav>          
+            <nav class="menu">
+              <ol>
+              <li>
+                <a href='{% url 'optomedik:index'%}'>Home </a> 
+              </li>
+              
+                <li>
+                  <a class="nav-link" href ="{% url 'optomedik:url_listar_pacientes'%}">Pacientes</a>
+                </li>
+                <li>
+                  <a class="nav-link" href ="{% url 'optomedik:url_listar_turnos'%}">Turnos</a>                                  
+                </li>
+                <li>
+                  <a class="nav-link" href="{% url 'optomedik:url_listar_hc' 0 %}">Historia Clinica</a>
+                </li>
+                <li>
+                  <a class="nav-link" href ="{% url 'optomedik:url_listar_pedidos'%}">Pedidos</a>
+                </li>
+                <li>
+                  <a class="nav-link" href ="{% url 'optomedik:url_listar_reportes'%}">Reportes</a>
+                </li>
+              </ol>
+            </nav>    
+            <div class="info">Usuario :  {{ request.user.first_name }} {{ request.user.last_name }}
+              {% for perfil in cxto_profile %}
+                <p>Perfil :{{perfil.tipo}} - {{perfil.descripcion}}                
+            {% endfor %}
+              
+              <a href="{% url 'logout' %}">[Salir]</a>
+            </div>           
+        </div>   
+      
+    </header>  
+      {% block body  %}
+      <main >
+        {% block content %}
+        {% endblock  %}
+      </main>
+      {% endblock body  %}
+      <div class="footer"> Trabajo Final de Curso Programación Web Full Stack con Python y JavaScript/ 
+        Designed with <\3 by <a href="https://twitter.com/arielbedoya">@arielbedoya @elkinbedoya&nbsp;&nbsp;&nbsp;  
+      </div> 
+    </body>
+</html>
+

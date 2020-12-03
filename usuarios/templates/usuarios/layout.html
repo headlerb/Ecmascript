@@ -1,0 +1,26 @@
+{%load static%}
+<!DOCTYPE html>
+<html>    
+    <head>
+        <title>Optomedik</title>        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">      
+        <link rel="stylesheet" href="{% static 'optomedik/style.css'%}">  
+    </head>
+    <body>
+      <header class="header">
+        <div class="cabecera">  
+            <nav class="logo">           
+                <a href="{% url 'logout' %}">Optomedik</a>
+            </nav>          
+            
+            
+        </div>
+        
+    </header>  
+        {% block body  %}
+        {% endblock body  %}
+    </body>
+    <div class="footer"> Trabajo Final de Curso Programación Web Full Stack con Python y JavaScript/ 
+      Designed with <\3 by <a href="https://twitter.com/arielbedoya">@arielbedoya @elkinbedoyaa&nbsp;&nbsp;&nbsp; 
+</html>
+

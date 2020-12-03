@@ -1,0 +1,10 @@
+{% extends 'optomedik/layout/layout.html' %}
+
+{% block content %}
+    <h2 class="mb-3">turnos: {{ turnos.pk }}</h2>
+    <a href="{% url 'optomedik:home' %}">Atras</a>
+    <a href="{% url 'optomedik:turno_update' turnos.pk %}">Modificar</a>
+    <a href="{% url 'optomedik:turno_delete' turnos.pk %}">Eliminar</a>
+    <hr />
+
+{% endblock  %}
